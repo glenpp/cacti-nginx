@@ -1,0 +1,11 @@
+#!/bin/sh
+
+STATUSURL=http://localhost/nginx_status
+
+
+curl --silent $STATUSURL \
+	| sed 's/^Active connections: \([0-9]\+\) *$/\1/' \
+	| grep -v '^server accepts handled requests$' \
+	| sed 's/^ \([0-9]\+\) \([0-9]\+\) \([0-9]\+\) *$/\1\n\2\n\3/' \
+	| sed 's/^Reading: \([0-9]\+\) Writing: \([0-9]\+\) Waiting: \([0-9]\+\) *$/\1\n\2\n\3/'
+
