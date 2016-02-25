@@ -16,7 +16,7 @@
 # Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 #
 #
-# See: http://www.pitt-pladdy.com/blog/_20150108-225857_0000_Nginx_on_Cacti_via_SNMP/
+# See: https://www.pitt-pladdy.com/blog/_20150108-225857_0000_Nginx_on_Cacti_via_SNMP/
 
 STATUSURL=http://localhost/nginx_status
 
